@@ -20,8 +20,8 @@ Diagnosis codes should be character strings and may have a decimal or not.}
 
 \item{messages}{Should the program report completion of each step? Must be TRUE or FALSE (default).
 \itemize{
-\item TRUE - Messages will report completion of each step (may be helpful for large data sets).  
-\item FALSE - Messages will not be reported.  
+\item TRUE - Messages will report completion of each step (may be helpful for large data sets).
+\item FALSE - Messages will not be reported.
 }}
 
 \item{verbose}{Should other updates be printed to the console? TRUE or FALSE (default). This can be helpful for long running computations.}
@@ -40,8 +40,8 @@ A dataframe identical to the dataframe passed to the function with the following
          \item mechmaj1-mechmaj4: CDC external cause of injury major mechanism for each E-Code captured
          \item intent1-intent4: intent for each E-Code captured
          \item lowmech: lowest CDC external cause of injury major mechanism for all E-Codes captured
-         \item PmortTQIP: The TQIP model predicted probability of mortality 
-         \item PmortNIS: The NIS model predicted probability of mortality 
+         \item PmortTQIP: The TQIP model predicted probability of mortality
+         \item PmortNIS: The NIS model predicted probability of mortality
          }
 }
 \description{
@@ -57,9 +57,9 @@ For each observation this function will
 \details{
 Data should be in wide format:
 \tabular{rrrrr}{
-ID    \tab dx1      \tab dx2     \tab dx3    \tab etc. \cr
-31416 \tab S32110A  \tab S3251   \tab NA     \tab      \cr
-31417 \tab S72141A  \tab T07XXXA \tab D62    \tab
+ID    \tab \tab dx1      \tab \tab dx2     \tab\tab dx3    \tab\tab etc. \cr
+31416 \tab\tab S32110A  \tab\tab S3251   \tab\tab NA     \tab\tab      \cr
+31417 \tab\tab S72141A  \tab\tab T07XXXA \tab\tab D62    \tab\tab
 }
 
 Codes for AIS severity:
@@ -77,7 +77,7 @@ Codes for AIS severity:
 df_in <- read.table(header = TRUE, text = "
     ident   dx1       dx2       dx3
     31416   S32110A   S3251     NA
-    31417   S72141A   T07XXXA   D62 
+    31417   S72141A   T07XXXA   D62
 ")
 df_out <- cat_trauma2(df_in, "dx", TRUE, FALSE)
 
